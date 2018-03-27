@@ -1,0 +1,6 @@
+*.pdf
+*psd
+psd/
+build/
+node_modules/
+preview/

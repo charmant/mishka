@@ -1,0 +1,11 @@
+{
+  "extends": "./node_modules/eslint-config-htmlacademy/es5.js",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
+  "rules": {
+    // Additional rules...
+  }
+}
