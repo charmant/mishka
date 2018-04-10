@@ -6,7 +6,7 @@
 *.psd
 psd/
 css/*.css
-build/
+
 node_modules/
 preview/
 Thumbs.db
