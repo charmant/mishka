@@ -166,11 +166,12 @@
           </div>
         </div>
         <div class="contacts__map-wrapper">
-          <picture>
+          <div class="contacts__map" id="map"></div>
+          <!-- <picture>
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
-          </picture>
+          </picture> -->
         </div>
         <a class="contacts__write button" href="#">Напишите нам</a>
       </section>
@@ -235,6 +236,7 @@
     <div class="modal__background"></div>
 
     <script src="js/picturefill.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBty2Jg0HcCj4HSf12JbGvhm3ZRryUTWEM&callback=initMap" async defer></script>
     <script src="js/svg4everybody.js"></script>
     <script src="js/script.js"></script>
   </body>

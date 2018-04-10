@@ -1474,17 +1474,9 @@ input[type="radio"].visually-hidden {
   position: relative;
   margin-bottom: 39px;
 }
-.contacts__map-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 145px;
-  left: 138px;
-  width: 67px;
-  height: 100px;
-  background: url("../img/icon-map-pin.svg") no-repeat;
-}
 .contacts__map {
   width: 320px;
+  height: 457px;
 }
 .contacts__write {
   display: block;
@@ -1537,10 +1529,6 @@ input[type="radio"].visually-hidden {
   .contacts__map-wrapper {
     margin-bottom: 55px;
   }
-  .contacts__map-wrapper::after {
-    top: 140px;
-    left: 363px;
-  }
   .contacts__map {
     width: 768px;
   }
@@ -1585,10 +1573,6 @@ input[type="radio"].visually-hidden {
     top: 72px;
     right: 0;
     margin-bottom: 0;
-  }
-  .contacts__map-wrapper::after {
-    top: 145px;
-    left: 255px;
   }
   .contacts__map {
     width: 525px;
