@@ -1,0 +1,155 @@
+.product {
+  padding-bottom: 30px;
+
+  &:hover .product__wrapper {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .product__wrapper {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.product__image {
+  display: block;
+  width: 260px;
+}
+
+.product__wrapper {
+  padding: 0 27px;
+  padding-top: 28px;
+  border: 1px solid #ececec;
+}
+
+.product__title {
+  margin: 0;
+  margin-bottom: 9px;
+
+  .font-bold();
+  font-size: 17px;
+  line-height: 24px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__description {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #444444;
+}
+
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0;
+
+  border-top: 1px solid #ececec;
+
+  b {
+    padding-right: 30px;
+
+    .font-bold();
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &--link {
+    width: 21px;
+    height: 19px;
+
+    opacity: 0.2;
+  }
+
+  &--link:hover {
+    opacity: 1.0;
+    svg {
+      fill: #63d1bb;
+    }
+  }
+
+  &--link:active svg {
+    opacity: 0.3;
+  }
+}
+
+
+
+
+
+@media (min-width: @tablet-width) {
+  .product {
+    display: flex;
+    padding-bottom: 54px;
+  }
+
+  .product__image {
+    width: 334px;
+  }
+
+  .product__wrapper {
+    display: flex;
+    flex-flow: column;
+
+    width: 334px;
+    box-sizing: border-box;
+  }
+
+  .product__title {
+    font-size: 20px;
+  }
+
+  .product__description {
+    font-size: 15px;
+  }
+
+  .product__price {
+    width: 268px;
+    margin-top: auto;
+
+    b {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product {
+    display: flex;
+    flex-flow: column;
+    width: 316px;
+    margin-bottom: 57px;
+    padding-bottom: 0;
+
+    &:not(:nth-of-type(3n)) {
+      margin-right: 50px;
+    }
+  }
+
+  .product__image {
+    width: 316px;
+  }
+
+  .product__wrapper {
+    flex-grow: 1;
+    width: 316px;
+    min-height: 195px;
+  }
+
+  .product__description {
+    margin: 0;
+   }
+
+  .product__price {
+    width: 256px;
+  }
+}

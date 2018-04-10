@@ -1,0 +1,35 @@
+.catalog {
+  width: @mobile-width;
+  margin: 0 auto;
+
+}
+
+.catalog__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    width: @tablet-width;
+  }
+
+  .catalog__wrapper {
+    width: 668px;
+    padding-top: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    width: @desktop-width;
+  }
+
+  .catalog__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1050px;
+    padding-top: 130px;
+  }
+}

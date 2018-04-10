@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/stylelint-config-htmlacademy/index.js",
+  "extends": "stylelint-config-htmlacademy",
   "rules": {
     "indentation": "tab",
     "number-leading-zero": null,

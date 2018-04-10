@@ -3,7 +3,6 @@
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   // grunt.loadNpmTasks('grunt-contrib-less');
-
   grunt.initConfig({
     less: {
       style: {
@@ -13,46 +12,15 @@ module.exports = function (grunt) {
       }
     },
 
-    copy: {
-      build: {
-        files: [{
-          expand: true,
-          src: [
-            'build/fonts/**/*.{woff, woff2}',
-            'build/img/**',
-            'build/js/**',
-            'build/*.html' // <<<<<<<<<<<<<<<delete
-          ],
-          dest: 'build'
-        }]
-      }
-    },
-
     postcss: {
-      style: {
-        options: {
-          processors: [
-            require('autoprefixer')()
-          ]
-        },
-        scr: 'build/css/*.css'
-      }
-    },
-
-    browserSync: {
-      server: {
-        bsFiles: {
-          src: ['build/*.html', 'build/css/*.css']
-        },
-        options: {
-          server: 'build/',
-          watchTask: true,
-          notify: false,
-          open: false
-        }
+      options: {
+        processors: [
+            require('autoprefixer')({browsers: 'last 2 versions'})
+        ]
       },
-      // browser: 'google chrome'
-      // '/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe http://localhost:3000'
+      dist: {
+        src: 'build/css/*.css'
+      }
     },
 
     watch: {
@@ -62,7 +30,98 @@ module.exports = function (grunt) {
       // },
       style: {
         files: ['less/**/*.less'],
-        tasks: ['less', 'postcss'] // , 'csso'
+        tasks: ['less', 'postcss', 'csso']
+      }
+    },
+
+    browserSync: {
+      server: {
+        bsFiles: {
+          src: ['build/*.html', 'build/css/*.css', 'build/js/*.js', 'build/img/*.svg']
+        },
+        options: {
+          server: './build/',
+          watchTask: true,
+          notify: false,
+          open: false
+        }
+      }
+    },
+
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["img/**/*.{png,jpg,svg}"]
+        }]
+      }
+    },
+
+    cwebp: {
+      images: {
+        options: {
+          q: 90
+        },
+        files: [{
+          expand: true,
+          src: ["img/**/*.{png,jpg}"]
+        }]
+      }
+    },
+
+    svgstore: {
+      options: {
+        includeTitleElement: false,
+      },
+      sprite: {
+        files: {
+          "build/img/sprite.svg": ["img/icon-*.svg"]
+        }
+      }
+    },
+
+    posthtml: {
+      options: {
+        use: [
+          require("posthtml-include")()
+        ]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["*.html"],
+          dest: "build"
+        }]
+      }
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            'fonts/**/*.{woff, woff2}',
+            'img/**',
+            'js/**',
+            '*.html'
+          ],
+          dest: 'build'
+        }]
       }
     },
 
@@ -78,7 +137,7 @@ module.exports = function (grunt) {
     'copy',
     'less',
     'postcss',
-    // 'csso',
+    'csso',
     // 'svgstore',
     // 'posthtml'
   ]);

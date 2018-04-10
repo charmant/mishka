@@ -1,130 +1,218 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Мишка</title>
-  </head>
-  <body>
 
-    <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="http://placehold.it/150x100"
-        width="86" height="35" alt="Мишка">
+<head>
+  <meta charset="utf-8">
+  <title>Мишка</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="page-header__logo">
+      <a href="index.html">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Мишка">
+        </picture>
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Поиск</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-          <ul class="main-nav__list offer-list">
-            <li class="offer-list__item">
-              <a href="#">Новые поступления</a>
-            </li>
-            <li class="offer-list__item">
-              <a href="#">Распродажа</a>
-            </li>
-            <li class="offer-list__item">
-              Бесплатная доставка по России
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+    </div>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--catalog">
+          <a class="site-list__link site-list__link--catalog" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item site-list__item--order">
+          <a class="site-list__link site-list__link--order" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="site-list__item site-list__item--search">
+          <a class="site-list__link site-list__link--search" href="#">
+            <svg class="site-list__logo-search" width="18" height="18">
+              <use xlink:href="img/sprite.svg#logo-search"></use></svg>
+            Поиск</a>
+        </li>
+        <li class="site-list__item site-list__item--basket">
+          <a class="site-list__link site-list__link--basket" href="#">
+            <svg class="site-list__logo-basket" width="21" height="19">
+              <use xlink:href="img/sprite.svg#logo-basket"></use></svg>
+            Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list offer-list">
+        <li class="offer-list__item offer-list__item--new">
+          <a href="#">Новые поступления</a>
+        </li>
+        <li class="offer-list__item offer-list__item--sale">
+          <a href="#">Распродажа</a>
+        </li>
+        <li class="offer-list__item offer-list__item--delivery">
+          Бесплатная доставка по России
+        </li>
+      </ul>
+    </nav>
+  </header>
 
     <main class="page-main">
 
       <h1 class="visually-hidden">Мишка - Вязание на заказ</h1>
 
-      <section class="represent">
-        <div class="represent__wrapper">
-          <h2 class="represent__title">Каталог товаров</h2>
+      <section class="represent represent--inner-page">
+        <div class="represent__wrapper represent__wrapper--inner-page">
+          <h2 class="represent__title represent__title--inner-page">Каталог товаров</h2>
         </div>
       </section>
 
-      <section class="products-list">
-        <div class="products-list__wrapper">
-          <article class="products-list__item product">
-            <div class="product__image">
-              <img src="http://placehold.it/150x100" alt="">
+      <section class="catalog">
+        <h2 class="visually-hidden">Перечень товаров</h2>
+        <div class="catalog__wrapper">
+          <article class="catalog__item product">
+            <a class="button-order" href="#">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/product-1-desktop@1x.jpg, img/product-1-desktop@2x.jpg">
+                <source media="(min-width: 768px)" srcset="img/product-1-tablet@1x.jpg, img/product-1-tablet@2x.jpg">
+                <img class="product__image" src="img/product-1-mobile@1x.jpg" srcset="img/product-1-mobile@2x.jpg" alt="Зайчик-попрыгайчик">
+              </picture>
+            </a>
+            <div class="product__wrapper">
+              <a class="button-order" href="#">
+                <h3 class="product__title">Зайчик-попрыгайчик</h3>
+              </a>
+              <p class="product__description">Рост 30 см, вес 200 г</p>
+              <div class="product__price">
+                <b>1 200 руб.</b>
+                <a class="product__price--link button-order" href="#" title="Добавить в корзину">
+                  <svg  width="21" height="19">
+                    <use xlink:href="img/sprite.svg#logo-basket"></use></svg>
+                </a>
+              </div>
             </div>
-            <h3 class="product__title">Зайчик-попрыгайчик</h3>
-            <p class="product__description">Рост 30 см, вес 200 г</p>
-            <button class="product__order" type="button">1 200 руб.</button>
           </article>
-          <article class="products-list__item product">
-            <div class="product__image">
-              <img src="http://placehold.it/150x100" alt="">
+          <article class="catalog__item product">
+            <a class="button-order" href="#">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/product-2-desktop@1x.jpg, img/product-2-desktop@2x.jpg">
+                <source media="(min-width: 768px)" srcset="img/product-2-tablet@1x.jpg, img/product-2-tablet@2x.jpg">
+                <img class="product__image" src="img/product-2-mobile@1x.jpg" srcset="img/product-2-mobile@2x.jpg" alt="Корзина для белья">
+              </picture>
+            </a>
+            <div class="product__wrapper">
+              <a class="button-order" href="#">
+                <h3 class="product__title">Корзина для белья</h3>
+              </a>
+              <p class="product__description">Диаметр 15 см, высота 10 см</p>
+              <div class="product__price">
+                <b>690 руб.</b>
+                <a class="product__price--link button-order" href="#" title="Добавить в корзину">
+                  <svg  width="21" height="19">
+                    <use xlink:href="img/sprite.svg#logo-basket"></use></svg>
+                </a>
+              </div>
             </div>
-            <h3 class="product__title">Корзина для белья</h3>
-            <p class="product__description">Диаметр 15 см, высота 10 см</p>
-            <button class="product__order" type="button">690 руб.</button>
           </article>
-          <article class="products-list__item product">
-            <div class="product__image">
-              <img src="http://placehold.it/150x100" alt="">
+          <article class="catalog__item product">
+            <a class="button-order" href="#">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/product-3-desktop@1x.jpg, img/product-3-desktop@2x.jpg">
+                <source media="(min-width: 768px)" srcset="img/product-3-tablet@1x.jpg, img/product-3-tablet@2x.jpg">
+                <img class="product__image" src="img/product-3-mobile@1x.jpg" srcset="img/product-3-mobile@2x.jpg" alt="Большая корзинка для игрушек">
+              </picture>
+            </a>
+            <div class="product__wrapper">
+              <a class="button-order" href="#">
+                <h3 class="product__title">Большая корзинка для игрушек</h3>
+              </a>
+              <p class="product__description">Диаметр 30 см, высота 30 см</p>
+              <div class="product__price">
+                <b>1 500 руб.</b>
+                <a class="product__price--link button-order" href="#" title="Добавить в корзину">
+                  <svg  width="21" height="19">
+                    <use xlink:href="img/sprite.svg#logo-basket"></use></svg>
+                </a>
+              </div>
             </div>
-            <h3 class="product__title">Большая корзинка для игрушек</h3>
-            <p class="product__description">Диаметр 30 см, высота 30 см</p>
-            <button class="product__order" type="button">1 500 руб.</button>
           </article>
         </div>
       </section>
 
-      <section class="how-make">
-        <div class="how-make__wrapper">
-          <article class="how-make__item news">
-            <div class="news__video">
-              <video src="videofile.ogg" poster="http://placehold.it/150x100">
-              </video>
+      <section class="news-section">
+        <h2 class="visually-hidden">Новостной блок</h2>
+        <div class="news-section__wrapper">
+          <article class="news-section__item video-block">
+            <div class="video-block__video">
+              <video src="videofile.ogg" ></video>
             </div>
-            <h3 class="news__title">Процесс производства</h3>
-            <p class="news__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="news__order button"href="#">Сделать заказ</a>
+            <h3 class="video-block__title">Процесс производства</h3>
+            <p class="video-block__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="button video-block__order" href="#">Сделать заказ</a>
           </article>
         </div>
       </section>
 
     </main>
 
+
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__logo page-footer__logo--hidden">
-          <a href="#">
-            <img class="page-footer__logo-image" src="http://placehold.it/150x100"
-            width="86" height="35" alt="Мишка">
+      <ul class="page-footer__wrapper">
+        <li class="page-footer__logo">
+          <a class="page-footer__link" href="index.html">
+            <svg width="102" height="35">
+              <use xlink:href="img/sprite.svg#logo-mishka-footer"></use></svg>
           </a>
-        </div>
-        <div class="page-footer__social social">
+        </li>
+        <li class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link social__link--instagram" href="#">Мы в Инстаграме</a>
+              <a class="social__link social__link--instagram" href="#">
+                <svg width="22" height="21">
+                  <use xlink:href="img/sprite.svg#logo-instagram"></use></svg>
+                <span class="visually-hidden">Мы в Инстаграме</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--facebook" href="#">Мы в Фейсбуке</a>
+              <a class="social__link social__link--facebook" href="#">
+                <svg width="15" height="28">
+                  <use xlink:href="img/sprite.svg#logo-facebook"></use></svg>
+                <span class="visually-hidden">Мы в Фейсбуке</span></a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--twitter" href="#">Мы в Твиттере</a>
+              <a class="social__link social__link--twitter" href="#">
+                <svg width="23" height="20">
+                  <use xlink:href="img/sprite.svg#logo-twitter"></use></svg>
+                <span class="visually-hidden">Мы в Твиттере</span></a>
             </li>
           </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
+        </li>
+        <li class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="#">HTML</a>
-        </div>
-      </div>
+          <a class="copyright__link" href="#">
+            <svg width="27" height="35">
+              <use xlink:href="img/sprite.svg#logo-htmlacademy"></use></svg>
+            <span class="visually-hidden"></span></a>
+        </li>
+      </ul>
     </footer>
 
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <form class="form form--modal" action="https://echo.htmlacademy.ru/" method="post">
+        <h3 class="form__title">Выберите размер:</h3>
+        <div class="form__label-wrapper form__label-wrapper-modal">
+          <input class="visually-hidden form__checkbox-modal" id="s-size" type="checkbox" name="s-size" checked>
+          <label class="form__label form__label--checkbox-modal" for="s-size">S</label>
+          <input class="visually-hidden form__checkbox-modal" id="m-size" type="checkbox" name="m-size">
+          <label class="form__label form__label--checkbox-modal" for="m-size">M</label>
+          <input class="visually-hidden form__checkbox-modal" id="l-size" type="checkbox" name="l-size">
+          <label class="form__label form__label--checkbox-modal" for="l-size">L</label>
+        </div>
+        <button class="button form__button-modal" type="submit">Добавить</button>
+      </form>
+    </section>
+    <div class="modal__background"></div>
+
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

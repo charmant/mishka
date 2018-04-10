@@ -1,0 +1,151 @@
+.page-footer {
+  width: @mobile-width;
+  margin: 0 auto;
+
+  background-color: #f1f1f1;
+}
+
+.page-footer__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+.page-footer__social {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 141px;
+  margin: 0 auto;
+  padding: 26px 0;
+
+  list-style: none;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link {
+
+  &--instagram {
+    width: 22px;
+    height: 21px;
+  }
+
+  &--facebook {
+    width: 15px;
+    height: 28px;
+  }
+
+  &--twitter {
+    width: 23px;
+    height: 20px;
+  }
+
+  &:hover svg {
+    fill: #46c1ae;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px 0 23px 0;
+}
+
+.copyright__text {
+  margin-right: 30px;
+
+  .font-bold();
+  font-size: 19px;
+  line-height: 19px;
+}
+
+.copyright__link {
+  width: 27px;
+  height: 35px;
+
+  &:hover svg {
+    fill: #46c1ae;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: @tablet-width;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 668px;
+
+    padding: 55px 0;
+  }
+
+  .page-footer__logo {
+    display: block;
+    width: 220px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .page-footer__link {
+    width: 102px;
+    height: 35px;
+
+    &:hover svg {
+      fill: #46c1ae;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
+  }
+
+  .page-footer__social {
+    border-bottom: none;
+  }
+
+  .social__list {
+    padding: 0;
+  }
+
+  .page-footer__copyright {
+    width: 220px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: auto;
+  }
+
+  .page-footer__wrapper {
+    width: 1050px;
+  }
+}

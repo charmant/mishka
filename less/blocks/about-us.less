@@ -1,0 +1,169 @@
+.about-us {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+.about-us__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 30px;
+}
+
+.about-us__title {
+  margin: 0;
+  margin-bottom: 86px;
+
+  .font-bold();
+  font-size: 25px;
+  line-height: 30px;
+
+}
+
+.features {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.features__item {
+  position: relative;
+
+  margin-bottom: 84px;
+
+  .font-bold();
+  font-size: 17px;
+  line-height: 20px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -55px;
+    left: 8px;
+  }
+
+  &--eco::before {
+    width: 32px;
+    height: 37px;
+
+    background: url("../img/icon-feature-1.svg") no-repeat;
+    background-size: 32px 37px;
+  }
+
+  &--style::before {
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+
+    background: url("../img/icon-feature-2.svg") no-repeat;
+    background-size: 47px 27px;
+  }
+
+  &--likes::before {
+    top: -50px;
+
+    width: 34px;
+    height: 27px;
+
+    background: url("../img/icon-feature-3.svg") no-repeat;
+    background-size: 34px 27px;
+  }
+
+  &--handmade::before {
+    width: 35px;
+    height: 34px;
+
+    background: url("../img/icon-feature-4.svg") no-repeat;
+    background-size: 35px 34px;
+  }
+
+  &--support::before {
+    left: -6px;
+
+    width: 55px;
+    height: 23px;
+
+    background: url("../img/icon-feature-5.svg") no-repeat;
+    background-size: 55px 23px;
+  }
+
+  &--wrap::before {
+    width: 33px;
+    height: 32px;
+
+    background: url("../img/icon-feature-6.svg") no-repeat;
+    background-size: 33px 32px;
+  }
+}
+
+.features__item--wrap {
+  margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us {
+    width: @tablet-width;
+  }
+
+  .about-us__wrapper {
+    width: 668px;
+    padding-top: 52px;
+    padding-bottom: 82px;
+  }
+
+  .about-us__title {
+    margin-bottom: 105px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about-us__features {
+    display: flex;
+  }
+
+  .features {
+    width: 334px;
+  }
+
+  .features__item {
+    margin-bottom: 112px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .features__item--likes {
+    margin-bottom: 0;
+  }
+
+  .features__item--wrap {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us {
+    width: @desktop-width;
+  }
+
+  .about-us__wrapper {
+    width: 700px;
+    padding-top: 68px;
+    padding-bottom: 88px;
+  }
+
+  .about-us__title {
+    margin-bottom: 95px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .features {
+    width: 350px;
+  }
+}
