@@ -115,7 +115,8 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           src: [
-            'fonts/**/*.{woff, woff2}',
+            'fonts/**/*.woff',
+            'fonts/**/*.woff2',
             'img/**',
             'js/**',
             '*.html'
