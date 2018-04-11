@@ -5,7 +5,7 @@
   "main": "Gruntfile.js",
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint 'less/**/*.less' --syntax less",
+    "stylelint": "stylelint less/**/*.less --syntax less",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "grunt less && grunt postcss",
     "start": "npm run build && grunt serve"

@@ -200,7 +200,6 @@
 }
 
 .form__checkbox-modal {
-
   &:hover + .form__label--checkbox-modal {
     border-color: rgba(68, 68, 68, 0.3);
   }
@@ -264,7 +263,8 @@
 
     &:hover + .form__no-label,
     &:focus + .form__no-label {
-      opacity: 1.0;
+      opacity: 1;
+
       svg {
         fill: #62d1ba;
       }
@@ -274,12 +274,10 @@
   &--user-phone {
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      -moz-appearance: none;
       appearance: none;
       margin: 0;
     }
-    -moz-appearance:textfield;
+    -moz-appearance: textfield;
   }
 
   &--textarea {
@@ -379,6 +377,7 @@
     padding-right: 10px;
 
     box-sizing: border-box;
+
     &::after {
       content: none;
     }
@@ -450,7 +449,6 @@
   }
 
   .form__no-label {
-
     &--phone {
       top: 0;
       right: 26px;
@@ -529,7 +527,6 @@
   }
 
   .form__label {
-
     &--checkbox {
       width: 33.3%;
     }
@@ -548,7 +545,6 @@
   }
 
   .form__no-label {
-
     &--phone {
       right: 8px;
     }

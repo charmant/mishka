@@ -570,7 +570,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.6;
 }
 .site-list__link[href]:hover svg {
-  opacity: 1.0;
+  opacity: 1;
   fill: #63d1bb;
 }
 .site-list__link[href]:active {
@@ -1021,7 +1021,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 50px;
   }
   .weekly-product__title {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-size: 43px;
     line-height: 50px;
   }
@@ -1680,7 +1680,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.2;
 }
 .product__price--link:hover {
-  opacity: 1.0;
+  opacity: 1;
 }
 .product__price--link:hover svg {
   fill: #63d1bb;
@@ -2227,7 +2227,7 @@ input[type="radio"].visually-hidden {
 .form__text--user-email:hover + .form__no-label,
 .form__text--user-phone:focus + .form__no-label,
 .form__text--user-email:focus + .form__no-label {
-  opacity: 1.0;
+  opacity: 1;
 }
 .form__text--user-phone:hover + .form__no-label svg,
 .form__text--user-email:hover + .form__no-label svg,
@@ -2241,8 +2241,7 @@ input[type="radio"].visually-hidden {
 .form__text--user-phone::-webkit-inner-spin-button,
 .form__text--user-phone::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+          appearance: none;
   margin: 0;
 }
 .form__text--textarea {
