@@ -1,8 +1,15 @@
 # Личный проект «Мишка» 
 **Мишка - Вязание на заказ (mockup PSD to HTML/CSS/JS)**
-*Ссылка: https://charmant.github.io/mishka/build/*
 
-Используемые техники при верстке сайта:
+* Выполнено три страницы:
+
+  - *Main page: https://charmant.github.io/mishka/build/*
+  
+  - *Catalog page: https://charmant.github.io/mishka/build/catalog.html*
+  
+  - *Form page: https://charmant.github.io/mishka/build/form.html*
+
+Используемые техники при верстке:
 
 * HTML - Семантическая вёрстка.
 * Код проверен с помощью сервиса https://validator.w3.org/nu/.
