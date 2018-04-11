@@ -31,7 +31,7 @@
           </li>
           <li class="site-list__item site-list__item--search">
             <a class="site-list__link site-list__link--search" href="#">
-              <svg class="site-list__logo-search" width="18" height="18">
+              <svg class="site-list__logo-search" width="18" height="18" viewBox="-1 -1 18 18">
                 <use xlink:href="img/sprite.svg#logo-search"></use></svg>
               Поиск</a>
           </li>
@@ -98,6 +98,10 @@
             </table>
           </div>
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/baskets-desktop@1x.webp 1x, img/baskets-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/baskets-tablet@1x.webp 1x, img/baskets-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/baskets-mobile@1x.webp 1x, img/baskets-mobile@2x.webp 2x">
+
             <source media="(min-width: 1150px)" srcset="img/baskets-desktop@1x.jpg 1x, img/baskets-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/baskets-tablet@1x.jpg 1x, img/baskets-tablet@2x.jpg 2x">
             <img class="weekly-product__image" src="img/baskets-mobile@1x.jpg" srcset="img/baskets-mobile@2x.jpg 2x" alt="Вязаные корзинки">
@@ -237,7 +241,6 @@
 
     <script src="js/picturefill.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBty2Jg0HcCj4HSf12JbGvhm3ZRryUTWEM&callback=initMap" async defer></script>
-    <script src="js/svg4everybody.js"></script>
     <script src="js/script.js"></script>
   </body>
 

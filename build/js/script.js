@@ -48,29 +48,18 @@ if (buttonOrder) {
 if (mapSection) {
   function initMap() {
     var map = new google.maps.Map(mapSection, {
-          zoom: 17,
-          center: {lat: 59.938786, lng: 30.323062 }
-        });
+      zoom: 17,
+      center: {lat: 59.938786, lng: 30.323062 }
+    });
     var pointer = {
       url: "img/icon-map-pin.svg",
       scaledSize: new google.maps.Size(67, 100)
     };
     var marker = new google.maps.Marker({
-          position: {lat: 59.938786, lng: 30.323062 },
-          map: map,
-          icon: pointer,
-          animation: google.maps.Animation.DROP,
-          title: 'HTML Academy'
-        });
-
-
-
-    // var myLatLng = new google.maps.LatLng(59.9363, 30.3217);
-    // var beachMarker = new google.maps.Marker({
-    //   position: myLatLng,
-    //   map: map,
-    //   optimized: false,
-    //   icon: image
-    // });
+      position: {lat: 59.938786, lng: 30.323062 },
+      map: map,
+      icon: pointer,
+      title: 'HTML Academy'
+    });
   }
 };

@@ -1471,7 +1471,6 @@ input[type="radio"].visually-hidden {
   border-color: rgba(70, 193, 174, 0.1);
 }
 .contacts__map-wrapper {
-  position: relative;
   margin-bottom: 39px;
 }
 .contacts__map {

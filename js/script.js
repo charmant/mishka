@@ -59,7 +59,6 @@ if (mapSection) {
       position: {lat: 59.938786, lng: 30.323062 },
       map: map,
       icon: pointer,
-      animation: google.maps.Animation.DROP,
       title: 'HTML Academy'
     });
   }
